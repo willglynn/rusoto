@@ -175,7 +175,12 @@ impl fmt::Display for HttpDispatchError {
 
 impl From<HyperError> for HttpDispatchError {
     fn from(err: HyperError) -> HttpDispatchError {
-        HttpDispatchError { message: err.to_string() }
+        let error_message = err.to_string();
+        let cause = match err.into_cause() {
+            Some(err) => err.to_string(),
+            None => "".to_owned(),
+        };
+        HttpDispatchError { message: format!("{}. Cause: {}", error_message, cause) }
     }
 }
 
