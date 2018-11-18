@@ -1,0 +1,1200 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `rusoto_mediaconvert` crate."><meta name="keywords" content="rust, rustlang, rust-lang, rusoto_mediaconvert"><title>rusoto_mediaconvert - Rust</title><link rel="stylesheet" type="text/css" href="../normalize.css"><link rel="stylesheet" type="text/css" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../dark.css"><link rel="stylesheet" type="text/css" href="../light.css" id="themeStyle"><script src="../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><a href='../rusoto_mediaconvert/index.html'><img src='https://raw.githubusercontent.com/rusoto/rusoto/master/assets/logo-square.png' alt='logo' width='100'></a><p class='location'>Crate rusoto_mediaconvert</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_mediaconvert', ty: 'mod', relpath: '../'};</script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../settings.html"><img src="../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/rusoto_mediaconvert/lib.rs.html#14-32' title='goto source code'>[src]</a></span><span class='in-band'>Crate <a class="mod" href=''>rusoto_mediaconvert</a></span></h1><div class='docblock'><p>AWS Elemental MediaConvert</p>
+<p>If you're using the service, you're probably looking for <a href="struct.MediaConvertClient.html">MediaConvertClient</a> and <a href="trait.MediaConvert.html">MediaConvert</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AacSettings.html"
+                                  title='struct rusoto_mediaconvert::AacSettings'>AacSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value AAC. The service accepts one of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode (rateControlMode) to &quot;VBR&quot; or &quot;CBR&quot;.  In VBR mode, you control the audio quality with the setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values depend on the rate control mode.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Ac3Settings.html"
+                                  title='struct rusoto_mediaconvert::Ac3Settings'>Ac3Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value AC3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AiffSettings.html"
+                                  title='struct rusoto_mediaconvert::AiffSettings'>AiffSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value AIFF.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AncillarySourceSettings.html"
+                                  title='struct rusoto_mediaconvert::AncillarySourceSettings'>AncillarySourceSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for ancillary captions source.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AudioCodecSettings.html"
+                                  title='struct rusoto_mediaconvert::AudioCodecSettings'>AudioCodecSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Audio codec settings (CodecSettings) under (AudioDescriptions) contains the group of settings related to audio encoding. The settings in this group vary depending on the value you choose for Audio codec (Codec). For each codec enum you choose, define the corresponding settings object. The following lists the codec enum, settings object pairs. * AAC, AacSettings * MP2, Mp2Settings * WAV, WavSettings * AIFF, AiffSettings * AC3, Ac3Settings * EAC3, Eac3Settings</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AudioDescription.html"
+                                  title='struct rusoto_mediaconvert::AudioDescription'>AudioDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Description of audio output</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AudioNormalizationSettings.html"
+                                  title='struct rusoto_mediaconvert::AudioNormalizationSettings'>AudioNormalizationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Advanced audio normalization settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AudioSelector.html"
+                                  title='struct rusoto_mediaconvert::AudioSelector'>AudioSelector</a></td>
+                           <td class='docblock-short'>
+                                <p>Selector for Audio</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AudioSelectorGroup.html"
+                                  title='struct rusoto_mediaconvert::AudioSelectorGroup'>AudioSelectorGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Group of Audio Selectors</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AvailBlanking.html"
+                                  title='struct rusoto_mediaconvert::AvailBlanking'>AvailBlanking</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for Avail Blanking</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BurninDestinationSettings.html"
+                                  title='struct rusoto_mediaconvert::BurninDestinationSettings'>BurninDestinationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Burn-In Destination Settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobRequest.html"
+                                  title='struct rusoto_mediaconvert::CancelJobRequest'>CancelJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CancelJobResponse.html"
+                                  title='struct rusoto_mediaconvert::CancelJobResponse'>CancelJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CaptionDescription.html"
+                                  title='struct rusoto_mediaconvert::CaptionDescription'>CaptionDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Description of Caption output</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CaptionDescriptionPreset.html"
+                                  title='struct rusoto_mediaconvert::CaptionDescriptionPreset'>CaptionDescriptionPreset</a></td>
+                           <td class='docblock-short'>
+                                <p>Caption Description for preset</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CaptionDestinationSettings.html"
+                                  title='struct rusoto_mediaconvert::CaptionDestinationSettings'>CaptionDestinationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Specific settings required by destination type. Note that burnin<em>destination</em>settings are not available if the source of the caption data is Embedded or Teletext.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CaptionSelector.html"
+                                  title='struct rusoto_mediaconvert::CaptionSelector'>CaptionSelector</a></td>
+                           <td class='docblock-short'>
+                                <p>Set up captions in your outputs by first selecting them from your input here.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CaptionSourceSettings.html"
+                                  title='struct rusoto_mediaconvert::CaptionSourceSettings'>CaptionSourceSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Source settings (SourceSettings) contains the group of settings for captions in the input.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ChannelMapping.html"
+                                  title='struct rusoto_mediaconvert::ChannelMapping'>ChannelMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>Channel mapping (ChannelMapping) contains the group of fields that hold the remixing value for each channel. Units are in dB. Acceptable values are within the range from -60 (mute) through 6. A setting of 0 passes the input channel unchanged to the output channel (no attenuation or amplification).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CmafEncryptionSettings.html"
+                                  title='struct rusoto_mediaconvert::CmafEncryptionSettings'>CmafEncryptionSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for CMAF encryption</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CmafGroupSettings.html"
+                                  title='struct rusoto_mediaconvert::CmafGroupSettings'>CmafGroupSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Type) under (OutputGroups)&gt;(OutputGroupSettings) to CMAF<em>GROUP</em>SETTINGS. Each output in a CMAF Output Group may only contain a single video, audio, or caption output.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ColorCorrector.html"
+                                  title='struct rusoto_mediaconvert::ColorCorrector'>ColorCorrector</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for color correction.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ContainerSettings.html"
+                                  title='struct rusoto_mediaconvert::ContainerSettings'>ContainerSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Container specific settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobRequest.html"
+                                  title='struct rusoto_mediaconvert::CreateJobRequest'>CreateJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobResponse.html"
+                                  title='struct rusoto_mediaconvert::CreateJobResponse'>CreateJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobTemplateRequest.html"
+                                  title='struct rusoto_mediaconvert::CreateJobTemplateRequest'>CreateJobTemplateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateJobTemplateResponse.html"
+                                  title='struct rusoto_mediaconvert::CreateJobTemplateResponse'>CreateJobTemplateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePresetRequest.html"
+                                  title='struct rusoto_mediaconvert::CreatePresetRequest'>CreatePresetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreatePresetResponse.html"
+                                  title='struct rusoto_mediaconvert::CreatePresetResponse'>CreatePresetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateQueueRequest.html"
+                                  title='struct rusoto_mediaconvert::CreateQueueRequest'>CreateQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateQueueResponse.html"
+                                  title='struct rusoto_mediaconvert::CreateQueueResponse'>CreateQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DashIsoEncryptionSettings.html"
+                                  title='struct rusoto_mediaconvert::DashIsoEncryptionSettings'>DashIsoEncryptionSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies DRM settings for DASH outputs.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DashIsoGroupSettings.html"
+                                  title='struct rusoto_mediaconvert::DashIsoGroupSettings'>DashIsoGroupSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Type) under (OutputGroups)&gt;(OutputGroupSettings) to DASH<em>ISO</em>GROUP_SETTINGS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Deinterlacer.html"
+                                  title='struct rusoto_mediaconvert::Deinterlacer'>Deinterlacer</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for deinterlacer</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteJobTemplateRequest.html"
+                                  title='struct rusoto_mediaconvert::DeleteJobTemplateRequest'>DeleteJobTemplateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteJobTemplateResponse.html"
+                                  title='struct rusoto_mediaconvert::DeleteJobTemplateResponse'>DeleteJobTemplateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePresetRequest.html"
+                                  title='struct rusoto_mediaconvert::DeletePresetRequest'>DeletePresetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeletePresetResponse.html"
+                                  title='struct rusoto_mediaconvert::DeletePresetResponse'>DeletePresetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteQueueRequest.html"
+                                  title='struct rusoto_mediaconvert::DeleteQueueRequest'>DeleteQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteQueueResponse.html"
+                                  title='struct rusoto_mediaconvert::DeleteQueueResponse'>DeleteQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointsRequest.html"
+                                  title='struct rusoto_mediaconvert::DescribeEndpointsRequest'>DescribeEndpointsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>DescribeEndpointsRequest</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeEndpointsResponse.html"
+                                  title='struct rusoto_mediaconvert::DescribeEndpointsResponse'>DescribeEndpointsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DvbNitSettings.html"
+                                  title='struct rusoto_mediaconvert::DvbNitSettings'>DvbNitSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Inserts DVB Network Information Table (NIT) at the specified table repetition interval.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DvbSdtSettings.html"
+                                  title='struct rusoto_mediaconvert::DvbSdtSettings'>DvbSdtSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Inserts DVB Service Description Table (NIT) at the specified table repetition interval.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DvbSubDestinationSettings.html"
+                                  title='struct rusoto_mediaconvert::DvbSubDestinationSettings'>DvbSubDestinationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>DVB-Sub Destination Settings</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DvbSubSourceSettings.html"
+                                  title='struct rusoto_mediaconvert::DvbSubSourceSettings'>DvbSubSourceSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>DVB Sub Source Settings</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DvbTdtSettings.html"
+                                  title='struct rusoto_mediaconvert::DvbTdtSettings'>DvbTdtSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Inserts DVB Time and Date Table (TDT) at the specified table repetition interval.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Eac3Settings.html"
+                                  title='struct rusoto_mediaconvert::Eac3Settings'>Eac3Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value EAC3.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EmbeddedSourceSettings.html"
+                                  title='struct rusoto_mediaconvert::EmbeddedSourceSettings'>EmbeddedSourceSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for embedded captions Source</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Endpoint.html"
+                                  title='struct rusoto_mediaconvert::Endpoint'>Endpoint</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes account specific API endpoint</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ExceptionBody.html"
+                                  title='struct rusoto_mediaconvert::ExceptionBody'>ExceptionBody</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.F4vSettings.html"
+                                  title='struct rusoto_mediaconvert::F4vSettings'>F4vSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for F4v container</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FileGroupSettings.html"
+                                  title='struct rusoto_mediaconvert::FileGroupSettings'>FileGroupSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Type) under (OutputGroups)&gt;(OutputGroupSettings) to FILE<em>GROUP</em>SETTINGS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FileSourceSettings.html"
+                                  title='struct rusoto_mediaconvert::FileSourceSettings'>FileSourceSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for File-based Captions in Source</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FrameCaptureSettings.html"
+                                  title='struct rusoto_mediaconvert::FrameCaptureSettings'>FrameCaptureSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value FRAME_CAPTURE.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobRequest.html"
+                                  title='struct rusoto_mediaconvert::GetJobRequest'>GetJobRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobResponse.html"
+                                  title='struct rusoto_mediaconvert::GetJobResponse'>GetJobResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobTemplateRequest.html"
+                                  title='struct rusoto_mediaconvert::GetJobTemplateRequest'>GetJobTemplateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetJobTemplateResponse.html"
+                                  title='struct rusoto_mediaconvert::GetJobTemplateResponse'>GetJobTemplateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPresetRequest.html"
+                                  title='struct rusoto_mediaconvert::GetPresetRequest'>GetPresetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetPresetResponse.html"
+                                  title='struct rusoto_mediaconvert::GetPresetResponse'>GetPresetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetQueueRequest.html"
+                                  title='struct rusoto_mediaconvert::GetQueueRequest'>GetQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetQueueResponse.html"
+                                  title='struct rusoto_mediaconvert::GetQueueResponse'>GetQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.H264Settings.html"
+                                  title='struct rusoto_mediaconvert::H264Settings'>H264Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value H_264.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.H265Settings.html"
+                                  title='struct rusoto_mediaconvert::H265Settings'>H265Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for H265 codec</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Hdr10Metadata.html"
+                                  title='struct rusoto_mediaconvert::Hdr10Metadata'>Hdr10Metadata</a></td>
+                           <td class='docblock-short'>
+                                <p>Use the HDR master display (Hdr10Metadata) settings to correct HDR metadata or to provide missing metadata. These values vary depending on the input video and must be provided by a color grader. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that these settings are not color correction. Note that if you are creating HDR outputs inside of an HLS CMAF package, to comply with the Apple specification, you must use the HVC1 for H.265 setting.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HlsCaptionLanguageMapping.html"
+                                  title='struct rusoto_mediaconvert::HlsCaptionLanguageMapping'>HlsCaptionLanguageMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>Caption Language Mapping</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HlsEncryptionSettings.html"
+                                  title='struct rusoto_mediaconvert::HlsEncryptionSettings'>HlsEncryptionSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for HLS encryption</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HlsGroupSettings.html"
+                                  title='struct rusoto_mediaconvert::HlsGroupSettings'>HlsGroupSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Type) under (OutputGroups)&gt;(OutputGroupSettings) to HLS<em>GROUP</em>SETTINGS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.HlsSettings.html"
+                                  title='struct rusoto_mediaconvert::HlsSettings'>HlsSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for HLS output groups</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Id3Insertion.html"
+                                  title='struct rusoto_mediaconvert::Id3Insertion'>Id3Insertion</a></td>
+                           <td class='docblock-short'>
+                                <p>To insert ID3 tags in your output, specify two values. Use ID3 tag (Id3) to specify the base 64 encoded string and use Timecode (TimeCode) to specify the time when the tag should be inserted. To insert multiple ID3 tags in your output, create multiple instances of ID3 insertion (Id3Insertion).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImageInserter.html"
+                                  title='struct rusoto_mediaconvert::ImageInserter'>ImageInserter</a></td>
+                           <td class='docblock-short'>
+                                <p>Enable the Image inserter (ImageInserter) feature to include a graphic overlay on your video. Enable or disable this feature for each output individually. This setting is disabled by default.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Input.html"
+                                  title='struct rusoto_mediaconvert::Input'>Input</a></td>
+                           <td class='docblock-short'>
+                                <p>Specifies media input</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InputClipping.html"
+                                  title='struct rusoto_mediaconvert::InputClipping'>InputClipping</a></td>
+                           <td class='docblock-short'>
+                                <p>To transcode only portions of your input (clips), include one Input clipping (one instance of InputClipping in the JSON job file) for each input clip. All input clips you specify will be included in every output of the job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InputTemplate.html"
+                                  title='struct rusoto_mediaconvert::InputTemplate'>InputTemplate</a></td>
+                           <td class='docblock-short'>
+                                <p>Specified video input in a template.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.InsertableImage.html"
+                                  title='struct rusoto_mediaconvert::InsertableImage'>InsertableImage</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for Insertable Image</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Job.html"
+                                  title='struct rusoto_mediaconvert::Job'>Job</a></td>
+                           <td class='docblock-short'>
+                                <p>Each job converts an input file into an output file or files. For more information, see the User Guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobSettings.html"
+                                  title='struct rusoto_mediaconvert::JobSettings'>JobSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>JobSettings contains all the transcode settings for a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobTemplate.html"
+                                  title='struct rusoto_mediaconvert::JobTemplate'>JobTemplate</a></td>
+                           <td class='docblock-short'>
+                                <p>A job template is a pre-made set of encoding instructions that you can use to quickly create a job.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.JobTemplateSettings.html"
+                                  title='struct rusoto_mediaconvert::JobTemplateSettings'>JobTemplateSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>JobTemplateSettings contains all the transcode settings saved in the template that will be applied to jobs created from it.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobTemplatesRequest.html"
+                                  title='struct rusoto_mediaconvert::ListJobTemplatesRequest'>ListJobTemplatesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobTemplatesResponse.html"
+                                  title='struct rusoto_mediaconvert::ListJobTemplatesResponse'>ListJobTemplatesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsRequest.html"
+                                  title='struct rusoto_mediaconvert::ListJobsRequest'>ListJobsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListJobsResponse.html"
+                                  title='struct rusoto_mediaconvert::ListJobsResponse'>ListJobsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPresetsRequest.html"
+                                  title='struct rusoto_mediaconvert::ListPresetsRequest'>ListPresetsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListPresetsResponse.html"
+                                  title='struct rusoto_mediaconvert::ListPresetsResponse'>ListPresetsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListQueuesRequest.html"
+                                  title='struct rusoto_mediaconvert::ListQueuesRequest'>ListQueuesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListQueuesResponse.html"
+                                  title='struct rusoto_mediaconvert::ListQueuesResponse'>ListQueuesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceRequest.html"
+                                  title='struct rusoto_mediaconvert::ListTagsForResourceRequest'>ListTagsForResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListTagsForResourceResponse.html"
+                                  title='struct rusoto_mediaconvert::ListTagsForResourceResponse'>ListTagsForResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.M2tsSettings.html"
+                                  title='struct rusoto_mediaconvert::M2tsSettings'>M2tsSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for M2TS Container.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.M3u8Settings.html"
+                                  title='struct rusoto_mediaconvert::M3u8Settings'>M3u8Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for TS segments in HLS</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MediaConvertClient.html"
+                                  title='struct rusoto_mediaconvert::MediaConvertClient'>MediaConvertClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the MediaConvert API.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MovSettings.html"
+                                  title='struct rusoto_mediaconvert::MovSettings'>MovSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for MOV Container.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Mp2Settings.html"
+                                  title='struct rusoto_mediaconvert::Mp2Settings'>Mp2Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value MP2.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Mp4Settings.html"
+                                  title='struct rusoto_mediaconvert::Mp4Settings'>Mp4Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for MP4 Container</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Mpeg2Settings.html"
+                                  title='struct rusoto_mediaconvert::Mpeg2Settings'>Mpeg2Settings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value MPEG2.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MsSmoothEncryptionSettings.html"
+                                  title='struct rusoto_mediaconvert::MsSmoothEncryptionSettings'>MsSmoothEncryptionSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>If you are using DRM, set DRM System (MsSmoothEncryptionSettings) to specify the value SpekeKeyProvider.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MsSmoothGroupSettings.html"
+                                  title='struct rusoto_mediaconvert::MsSmoothGroupSettings'>MsSmoothGroupSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Type) under (OutputGroups)&gt;(OutputGroupSettings) to MS<em>SMOOTH</em>GROUP_SETTINGS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NielsenConfiguration.html"
+                                  title='struct rusoto_mediaconvert::NielsenConfiguration'>NielsenConfiguration</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for Nielsen Configuration</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NoiseReducer.html"
+                                  title='struct rusoto_mediaconvert::NoiseReducer'>NoiseReducer</a></td>
+                           <td class='docblock-short'>
+                                <p>Enable the Noise reducer (NoiseReducer) feature to remove noise from your video output if necessary. Enable or disable this feature for each output individually. This setting is disabled by default. When you enable Noise reducer (NoiseReducer), you must also select a value for Noise reducer filter (NoiseReducerFilter).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NoiseReducerFilterSettings.html"
+                                  title='struct rusoto_mediaconvert::NoiseReducerFilterSettings'>NoiseReducerFilterSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for a noise reducer filter</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NoiseReducerSpatialFilterSettings.html"
+                                  title='struct rusoto_mediaconvert::NoiseReducerSpatialFilterSettings'>NoiseReducerSpatialFilterSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Noise reducer filter settings for spatial filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Output.html"
+                                  title='struct rusoto_mediaconvert::Output'>Output</a></td>
+                           <td class='docblock-short'>
+                                <p>An output object describes the settings for a single output file or stream in an output group.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputChannelMapping.html"
+                                  title='struct rusoto_mediaconvert::OutputChannelMapping'>OutputChannelMapping</a></td>
+                           <td class='docblock-short'>
+                                <p>OutputChannel mapping settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputDetail.html"
+                                  title='struct rusoto_mediaconvert::OutputDetail'>OutputDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Details regarding output</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputGroup.html"
+                                  title='struct rusoto_mediaconvert::OutputGroup'>OutputGroup</a></td>
+                           <td class='docblock-short'>
+                                <p>Group of outputs</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputGroupDetail.html"
+                                  title='struct rusoto_mediaconvert::OutputGroupDetail'>OutputGroupDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains details about the output groups specified in the job settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputGroupSettings.html"
+                                  title='struct rusoto_mediaconvert::OutputGroupSettings'>OutputGroupSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Output Group settings, including type</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.OutputSettings.html"
+                                  title='struct rusoto_mediaconvert::OutputSettings'>OutputSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Specific settings for this type of output.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Preset.html"
+                                  title='struct rusoto_mediaconvert::Preset'>Preset</a></td>
+                           <td class='docblock-short'>
+                                <p>A preset is a collection of preconfigured media conversion settings that you want MediaConvert to apply to the output during the conversion process.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.PresetSettings.html"
+                                  title='struct rusoto_mediaconvert::PresetSettings'>PresetSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for preset</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ProresSettings.html"
+                                  title='struct rusoto_mediaconvert::ProresSettings'>ProresSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (VideoDescription)&gt;(CodecSettings) to the value PRORES.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Queue.html"
+                                  title='struct rusoto_mediaconvert::Queue'>Queue</a></td>
+                           <td class='docblock-short'>
+                                <p>MediaConvert jobs are submitted to a queue. Unless specified otherwise jobs are submitted to a built-in default queue. User can create additional queues to separate the jobs of different categories or priority.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Rectangle.html"
+                                  title='struct rusoto_mediaconvert::Rectangle'>Rectangle</a></td>
+                           <td class='docblock-short'>
+                                <p>Use Rectangle to identify a specific area of the video frame.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RemixSettings.html"
+                                  title='struct rusoto_mediaconvert::RemixSettings'>RemixSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Use Manual audio remixing (RemixSettings) to adjust audio levels for each audio channel in each output of your job. With audio remixing, you can output more or fewer audio channels than your input audio source provides.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ResourceTags.html"
+                                  title='struct rusoto_mediaconvert::ResourceTags'>ResourceTags</a></td>
+                           <td class='docblock-short'>
+                                <p>The Amazon Resource Name (ARN) and tags for an AWS Elemental MediaConvert resource.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SccDestinationSettings.html"
+                                  title='struct rusoto_mediaconvert::SccDestinationSettings'>SccDestinationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for SCC caption output.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SpekeKeyProvider.html"
+                                  title='struct rusoto_mediaconvert::SpekeKeyProvider'>SpekeKeyProvider</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for use with a SPEKE key provider</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StaticKeyProvider.html"
+                                  title='struct rusoto_mediaconvert::StaticKeyProvider'>StaticKeyProvider</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for use with a SPEKE key provider.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagResourceRequest.html"
+                                  title='struct rusoto_mediaconvert::TagResourceRequest'>TagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TagResourceResponse.html"
+                                  title='struct rusoto_mediaconvert::TagResourceResponse'>TagResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TeletextDestinationSettings.html"
+                                  title='struct rusoto_mediaconvert::TeletextDestinationSettings'>TeletextDestinationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for Teletext caption output</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TeletextSourceSettings.html"
+                                  title='struct rusoto_mediaconvert::TeletextSourceSettings'>TeletextSourceSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings specific to Teletext caption sources, including Page number.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimecodeBurnin.html"
+                                  title='struct rusoto_mediaconvert::TimecodeBurnin'>TimecodeBurnin</a></td>
+                           <td class='docblock-short'>
+                                <p>Timecode burn-in (TimecodeBurnIn)--Burns the output timecode and specified prefix into the output.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimecodeConfig.html"
+                                  title='struct rusoto_mediaconvert::TimecodeConfig'>TimecodeConfig</a></td>
+                           <td class='docblock-short'>
+                                <p>These settings control how the service handles timecodes throughout the job. These settings don&#39;t affect input clipping.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimedMetadataInsertion.html"
+                                  title='struct rusoto_mediaconvert::TimedMetadataInsertion'>TimedMetadataInsertion</a></td>
+                           <td class='docblock-short'>
+                                <p>Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in your job. To include timed metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3 insertion (Id3Insertion) objects.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Timing.html"
+                                  title='struct rusoto_mediaconvert::Timing'>Timing</a></td>
+                           <td class='docblock-short'>
+                                <p>Information about when jobs are submitted, started, and finished is specified in Unix epoch format in seconds.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TtmlDestinationSettings.html"
+                                  title='struct rusoto_mediaconvert::TtmlDestinationSettings'>TtmlDestinationSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings specific to TTML caption outputs, including Pass style information (TtmlStylePassthrough).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagResourceRequest.html"
+                                  title='struct rusoto_mediaconvert::UntagResourceRequest'>UntagResourceRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UntagResourceResponse.html"
+                                  title='struct rusoto_mediaconvert::UntagResourceResponse'>UntagResourceResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateJobTemplateRequest.html"
+                                  title='struct rusoto_mediaconvert::UpdateJobTemplateRequest'>UpdateJobTemplateRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateJobTemplateResponse.html"
+                                  title='struct rusoto_mediaconvert::UpdateJobTemplateResponse'>UpdateJobTemplateResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdatePresetRequest.html"
+                                  title='struct rusoto_mediaconvert::UpdatePresetRequest'>UpdatePresetRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdatePresetResponse.html"
+                                  title='struct rusoto_mediaconvert::UpdatePresetResponse'>UpdatePresetResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateQueueRequest.html"
+                                  title='struct rusoto_mediaconvert::UpdateQueueRequest'>UpdateQueueRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateQueueResponse.html"
+                                  title='struct rusoto_mediaconvert::UpdateQueueResponse'>UpdateQueueResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VideoCodecSettings.html"
+                                  title='struct rusoto_mediaconvert::VideoCodecSettings'>VideoCodecSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Video codec settings, (CodecSettings) under (VideoDescription), contains the group of settings related to video encoding. The settings in this group vary depending on the value you choose for Video codec (Codec). For each codec enum you choose, define the corresponding settings object. The following lists the codec enum, settings object pairs. * H<em>264, H264Settings * H</em>265, H265Settings * MPEG2, Mpeg2Settings * PRORES, ProresSettings * FRAME_CAPTURE, FrameCaptureSettings</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VideoDescription.html"
+                                  title='struct rusoto_mediaconvert::VideoDescription'>VideoDescription</a></td>
+                           <td class='docblock-short'>
+                                <p>Settings for video outputs</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VideoDetail.html"
+                                  title='struct rusoto_mediaconvert::VideoDetail'>VideoDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains details about the output&#39;s video stream</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VideoPreprocessor.html"
+                                  title='struct rusoto_mediaconvert::VideoPreprocessor'>VideoPreprocessor</a></td>
+                           <td class='docblock-short'>
+                                <p>Find additional transcoding features under Preprocessors (VideoPreprocessors). Enable the features at each output individually. These features are disabled by default.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.VideoSelector.html"
+                                  title='struct rusoto_mediaconvert::VideoSelector'>VideoSelector</a></td>
+                           <td class='docblock-short'>
+                                <p>Selector for video.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WavSettings.html"
+                                  title='struct rusoto_mediaconvert::WavSettings'>WavSettings</a></td>
+                           <td class='docblock-short'>
+                                <p>Required when you set (Codec) under (AudioDescriptions)&gt;(CodecSettings) to the value WAV.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CancelJobError.html"
+                                  title='enum rusoto_mediaconvert::CancelJobError'>CancelJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CancelJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateJobError.html"
+                                  title='enum rusoto_mediaconvert::CreateJobError'>CreateJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateJobTemplateError.html"
+                                  title='enum rusoto_mediaconvert::CreateJobTemplateError'>CreateJobTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateJobTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreatePresetError.html"
+                                  title='enum rusoto_mediaconvert::CreatePresetError'>CreatePresetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreatePreset</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateQueueError.html"
+                                  title='enum rusoto_mediaconvert::CreateQueueError'>CreateQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateQueue</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteJobTemplateError.html"
+                                  title='enum rusoto_mediaconvert::DeleteJobTemplateError'>DeleteJobTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteJobTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeletePresetError.html"
+                                  title='enum rusoto_mediaconvert::DeletePresetError'>DeletePresetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeletePreset</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteQueueError.html"
+                                  title='enum rusoto_mediaconvert::DeleteQueueError'>DeleteQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteQueue</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeEndpointsError.html"
+                                  title='enum rusoto_mediaconvert::DescribeEndpointsError'>DescribeEndpointsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeEndpoints</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobError.html"
+                                  title='enum rusoto_mediaconvert::GetJobError'>GetJobError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJob</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetJobTemplateError.html"
+                                  title='enum rusoto_mediaconvert::GetJobTemplateError'>GetJobTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetJobTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetPresetError.html"
+                                  title='enum rusoto_mediaconvert::GetPresetError'>GetPresetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetPreset</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetQueueError.html"
+                                  title='enum rusoto_mediaconvert::GetQueueError'>GetQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetQueue</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobTemplatesError.html"
+                                  title='enum rusoto_mediaconvert::ListJobTemplatesError'>ListJobTemplatesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobTemplates</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListJobsError.html"
+                                  title='enum rusoto_mediaconvert::ListJobsError'>ListJobsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListJobs</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListPresetsError.html"
+                                  title='enum rusoto_mediaconvert::ListPresetsError'>ListPresetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListPresets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListQueuesError.html"
+                                  title='enum rusoto_mediaconvert::ListQueuesError'>ListQueuesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListQueues</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListTagsForResourceError.html"
+                                  title='enum rusoto_mediaconvert::ListTagsForResourceError'>ListTagsForResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListTagsForResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TagResourceError.html"
+                                  title='enum rusoto_mediaconvert::TagResourceError'>TagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UntagResourceError.html"
+                                  title='enum rusoto_mediaconvert::UntagResourceError'>UntagResourceError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UntagResource</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateJobTemplateError.html"
+                                  title='enum rusoto_mediaconvert::UpdateJobTemplateError'>UpdateJobTemplateError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateJobTemplate</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdatePresetError.html"
+                                  title='enum rusoto_mediaconvert::UpdatePresetError'>UpdatePresetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdatePreset</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateQueueError.html"
+                                  title='enum rusoto_mediaconvert::UpdateQueueError'>UpdateQueueError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateQueue</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.MediaConvert.html"
+                                  title='trait rusoto_mediaconvert::MediaConvert'>MediaConvert</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the MediaConvert API. MediaConvert clients implement this trait.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../";window.currentCrate = "rusoto_mediaconvert";</script><script src="../aliases.js"></script><script src="../main.js"></script><script defer src="../search-index.js"></script></body></html>
